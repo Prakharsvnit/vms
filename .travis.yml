@@ -16,6 +16,6 @@ script:
   - python manage.py syncdb --noinput
   - python manage.py migrate --noinput --traceback --settings=vms.settings
   - coverage run --source='.' manage.py test
-  - coverage run manage.py test --settings=cmdbox.vms_settings
+  - coverage run manage.py test --settings=vms.settings
 after_success:
     coveralls --rcfile=.coveragerc
